@@ -141,11 +141,11 @@ services:
         - PUID=1000
         - PGID=1000
         - TZ=Europe/Madrid
-        #- SERVERURL= Omplir 
-        #- SERVERPORT= Omplir
-        #- PEERS= Omplir 
-        #- INTERNAL_SUBNET= Omplir # Xarxa WireGuard
-        #- ALLOWEDIPS= Omplir # Xarxa que s'enruta
+        - SERVERURL= ${IP_SERVERURL}
+        - SERVERPORT= ${SERVERPORT}
+        - PEERS= ${PEERS} 
+        - INTERNAL_SUBNET= ${INTERNAL_SUBNET} # Xarxa WireGuard
+        - ALLOWEDIPS= ${ALLOWEDIPS} # Xarxa que s'enruta
         - LOG_CONFS=false # No guardar conf en logs
       volumes:
         - ./volumes/wireguard:/config
